@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Star, X } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export default function AboutSection() {
   const [showStoryModal, setShowStoryModal] = useState(false);
@@ -47,17 +48,17 @@ export default function AboutSection() {
               {/* Overlapping Avatars */}
               <div className="flex -space-x-2.5 overflow-hidden">
                 <img
-                  src="/images/avatar-1.jpg"
+                  src={getAssetUrl('/images/avatar-1.jpg')}
                   alt="Satisfied customer review"
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#FAF6EE] object-cover"
                 />
                 <img
-                  src="/images/avatar-2.jpg"
+                  src={getAssetUrl('/images/avatar-2.jpg')}
                   alt="Satisfied customer review"
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#FAF6EE] object-cover"
                 />
                 <img
-                  src="/images/avatar-3.jpg"
+                  src={getAssetUrl('/images/avatar-3.jpg')}
                   alt="Satisfied customer review"
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-[#FAF6EE] object-cover"
                 />
@@ -84,7 +85,7 @@ export default function AboutSection() {
           <div className="relative group p-2 rounded-3xl border border-[#E5DCCE] bg-[#FCFAF6] shadow-sm">
             <div className="aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden relative">
               <img
-                src="/images/about-experience.jpg"
+                src={getAssetUrl('/images/about-experience.jpg')}
                 alt="Friends dining and enjoying moments together at Drizzle"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-104"
                 loading="lazy"

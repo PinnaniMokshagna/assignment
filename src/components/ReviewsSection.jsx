@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export default function ReviewsSection() {
   const reviews = [
@@ -9,7 +10,8 @@ export default function ReviewsSection() {
       author: "Daniel Johnson",
       location: "California, USA",
       rating: "5.0",
-      theme: "light"
+      theme: "light",
+      avatar: getAssetUrl('/images/avatar-1.jpg')
     },
     {
       id: 2,
@@ -17,7 +19,8 @@ export default function ReviewsSection() {
       author: "Sophia Lee",
       location: "New York, USA",
       rating: "5.0",
-      theme: "dark" // High contrast deep burgundy card!
+      theme: "dark", // High contrast deep burgundy card!
+      avatar: getAssetUrl('/images/avatar-2.jpg')
     },
     {
       id: 3,
@@ -25,7 +28,8 @@ export default function ReviewsSection() {
       author: "Emily Carter",
       location: "Texas, USA",
       rating: "5.0",
-      theme: "light"
+      theme: "light",
+      avatar: getAssetUrl('/images/avatar-3.jpg')
     }
   ];
 
@@ -74,14 +78,21 @@ export default function ReviewsSection() {
                   </p>
                 </div>
 
-                <div className={`pt-4 border-t flex items-end justify-between gap-2 ${isDark ? 'border-white/15' : 'border-[#EFE7D8]'}`}>
-                  <div>
-                    <h4 className={`text-xs font-bold ${isDark ? 'text-white' : 'text-[#241614]'}`}>
-                      — {rev.author}
-                    </h4>
-                    <span className={`text-[10px] block ${isDark ? 'text-[#D8CEBE]' : 'text-[#8C7A70]'}`}>
-                      {rev.location}
-                    </span>
+                <div className={`pt-4 border-t flex items-center justify-between gap-2 ${isDark ? 'border-white/15' : 'border-[#EFE7D8]'}`}>
+                  <div className="flex items-center gap-2.5">
+                    <img
+                      src={rev.avatar}
+                      alt={rev.author}
+                      className="w-9 h-9 rounded-full object-cover border border-[#E5DCCE] shadow-2xs"
+                    />
+                    <div>
+                      <h4 className={`text-xs font-bold ${isDark ? 'text-white' : 'text-[#241614]'}`}>
+                        {rev.author}
+                      </h4>
+                      <span className={`text-[10px] block ${isDark ? 'text-[#D8CEBE]' : 'text-[#8C7A70]'}`}>
+                        {rev.location}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-1">

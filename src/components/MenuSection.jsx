@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Utensils, Soup, Leaf, Wine } from 'lucide-react';
 import { BurritoWrapDoodle } from './DoodleIcons';
+import { getAssetUrl } from '../utils/assets';
 
 export default function MenuSection() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -37,8 +38,18 @@ export default function MenuSection() {
         {/* CARD 1: Main Course */}
         <div className="bg-[#FCFAF6] border border-[#E8E0D2] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
           <div>
+            {/* Food Picture */}
+            <div className="w-full h-36 rounded-2xl overflow-hidden mb-4 border border-[#E5DCCE] bg-[#FAF6EE]">
+              <img
+                src={getAssetUrl('/images/gallery-6.jpg')}
+                alt="Main Course"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+
             {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-4">
+            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-3">
               <Utensils size={20} strokeWidth={1.75} />
             </div>
 
@@ -100,8 +111,18 @@ export default function MenuSection() {
         {/* CARD 2: Soups & Salads */}
         <div className="bg-[#FCFAF6] border border-[#E8E0D2] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
           <div>
+            {/* Food Picture */}
+            <div className="w-full h-36 rounded-2xl overflow-hidden mb-4 border border-[#E5DCCE] bg-[#FAF6EE]">
+              <img
+                src={getAssetUrl('/images/gallery-4.jpg')}
+                alt="Soups & Salads"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+
             {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-4">
+            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-3">
               <Soup size={20} strokeWidth={1.75} />
             </div>
 
@@ -147,8 +168,18 @@ export default function MenuSection() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#B83A28]/20 rounded-full blur-2xl pointer-events-none" />
 
           <div className="relative z-10">
+            {/* Food Picture */}
+            <div className="w-full h-36 rounded-2xl overflow-hidden mb-4 border border-white/10 bg-[#4A1016]">
+              <img
+                src={getAssetUrl('/images/gallery-3.jpg')}
+                alt="Vegan & Vegetarian"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+
             {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-[#4A1016] border border-[#681C24] flex items-center justify-center text-[#E5D5C5] mb-4">
+            <div className="w-10 h-10 rounded-xl bg-[#4A1016] border border-[#681C24] flex items-center justify-center text-[#E5D5C5] mb-3">
               <Leaf size={20} strokeWidth={1.75} />
             </div>
 
@@ -187,8 +218,18 @@ export default function MenuSection() {
         {/* CARD 4: Beverages / Drinks */}
         <div className="bg-[#FCFAF6] border border-[#E8E0D2] rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
           <div>
+            {/* Drink Picture */}
+            <div className="w-full h-36 rounded-2xl overflow-hidden mb-4 border border-[#E5DCCE] bg-[#FAF6EE]">
+              <img
+                src={getAssetUrl('/images/gallery-1.jpg')}
+                alt="Beverages and Drinks"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+
             {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-4">
+            <div className="w-10 h-10 rounded-xl bg-[#FAF6EE] border border-[#E5DCCE] flex items-center justify-center text-[#241614] mb-3">
               <Wine size={20} strokeWidth={1.75} />
             </div>
 

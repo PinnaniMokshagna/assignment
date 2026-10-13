@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export default function Hero({ onOpenReservation }) {
   return (
@@ -42,7 +43,7 @@ export default function Hero({ onOpenReservation }) {
         {/* Hero Image */}
         <div className="w-full h-[360px] sm:h-[460px] md:h-[540px] lg:h-[620px] rounded-2xl md:rounded-[36px] overflow-hidden shadow-md border border-[#E5DCCE] relative">
           <img
-            src="/images/hero-restaurant.jpg"
+            src={getAssetUrl('/images/hero-restaurant.jpg')}
             alt="Drizzle luxury restaurant dining interior"
             className="w-full h-full object-cover object-center filter brightness-[0.98] transition-transform duration-700 hover:scale-102"
             loading="eager"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GalleryBackgroundDoodles } from './DoodleIcons';
 import { X, ZoomIn } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -9,42 +10,42 @@ export default function GallerySection() {
     {
       id: 1,
       title: "Good Vibe",
-      image: "/images/gallery-1.jpg",
+      image: getAssetUrl('/images/gallery-1.jpg'),
       rotation: "-rotate-6 sm:-rotate-8",
       offset: "translate-y-2 sm:translate-y-4"
     },
     {
       id: 2,
       title: "Burger",
-      image: "/images/gallery-2.jpg",
+      image: getAssetUrl('/images/gallery-2.jpg'),
       rotation: "-rotate-2 sm:-rotate-3",
       offset: "-translate-y-1 sm:-translate-y-2"
     },
     {
       id: 3,
       title: "Rice & More",
-      image: "/images/gallery-3.jpg",
+      image: getAssetUrl('/images/gallery-3.jpg'),
       rotation: "rotate-0",
       offset: "-translate-y-3 sm:-translate-y-5"
     },
     {
       id: 4,
       title: "Salad & Soup",
-      image: "/images/gallery-4.jpg",
+      image: getAssetUrl('/images/gallery-4.jpg'),
       rotation: "rotate-2 sm:rotate-3",
       offset: "-translate-y-1 sm:-translate-y-2"
     },
     {
       id: 5,
       title: "Special Burger",
-      image: "/images/gallery-5.jpg",
+      image: getAssetUrl('/images/gallery-5.jpg'),
       rotation: "rotate-5 sm:rotate-6",
       offset: "translate-y-2 sm:translate-y-3"
     },
     {
       id: 6,
       title: "Pasta",
-      image: "/images/gallery-6.jpg",
+      image: getAssetUrl('/images/gallery-6.jpg'),
       rotation: "rotate-8 sm:rotate-10",
       offset: "translate-y-4 sm:translate-y-6"
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export default function ReservationSection({ onOpenReservation }) {
   return (
@@ -40,7 +41,7 @@ export default function ReservationSection({ onOpenReservation }) {
             {/* Image 1: Toasting wine glasses */}
             <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#E5DCCE] shadow-xs group aspect-[4/3] sm:aspect-[4/3]">
               <img
-                src="/images/reserve-1.jpg"
+                src={getAssetUrl('/images/reserve-1.jpg')}
                 alt="Friends toasting wine glasses celebrating at restaurant"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
@@ -51,7 +52,7 @@ export default function ReservationSection({ onOpenReservation }) {
             {/* Image 2: Smiling couple */}
             <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#E5DCCE] shadow-xs group aspect-[4/3] sm:aspect-[4/3]">
               <img
-                src="/images/reserve-2.jpg"
+                src={getAssetUrl('/images/reserve-2.jpg')}
                 alt="Smiling happy couple enjoying romantic evening dinner"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
@@ -62,7 +63,7 @@ export default function ReservationSection({ onOpenReservation }) {
             {/* Image 3: Wide ambient dining room */}
             <div className="col-span-2 relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#E5DCCE] shadow-xs group h-[200px] sm:h-[260px] md:h-[300px]">
               <img
-                src="/images/reserve-3.jpg"
+                src={getAssetUrl('/images/reserve-3.jpg')}
                 alt="Drizzle warm dining hall seating and ambient table decor"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-103"
                 loading="lazy"
